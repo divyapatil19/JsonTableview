@@ -14,6 +14,8 @@
 
 #import "ViewController.h"
 #import "LoginData.h"
+#import "DataViewController.h"
+
 @interface ViewController ()
 
 @end
@@ -76,7 +78,23 @@
             }] resume];
     
     ///////////////////////////////////////////////////////////////////////////////////
+   
+    
+    NSString * storyboardName = @"Main";
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+    UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    DataViewController *myVC = (DataViewController *)[storyboard instantiateViewControllerWithIdentifier:@"DataViewController"];
+////        [self.navigationController pushViewController:myVC animated:YES];
+//    [self presentViewController:myVC animated:YES completion:nil];
+//
+
+    
 }
+
+
 
 - (NSManagedObjectContext *)managedObjectContext
 {
@@ -87,6 +105,9 @@
     }
     return context;
 }
+
+
+
 
 -(void)saveLoginDataintoCoreData:(NSDictionary *)response
 {
@@ -210,7 +231,8 @@
                  NSLog(@"Core Data Has been Updted sucessfully......");
              }
          }
- 
+    
+   
 }
 
     

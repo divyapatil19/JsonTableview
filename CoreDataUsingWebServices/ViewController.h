@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<NSURLConnectionDelegate, NSURLConnectionDataDelegate>
+@interface ViewController : UIViewController//<NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *textUsername;
 @property (weak, nonatomic) IBOutlet UITextField *textPass;
 @property (weak, nonatomic) IBOutlet UIButton *btnSubmit;
 
 - (IBAction)LoginAction:(id)sender;
+
+@property(nonatomic) BOOL *isSomethingEnabled;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 

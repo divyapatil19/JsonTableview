@@ -7,7 +7,7 @@
 //
 
 #import "DataViewController.h"
-
+#import "LoginData.h"
 @interface DataViewController ()
 
 @end
@@ -18,6 +18,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+
+
+
+
+
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
